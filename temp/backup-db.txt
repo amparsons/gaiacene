@@ -1,0 +1,64 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.9.5
+-- http://www.phpmyadmin.net
+--
+-- Host: mysql9.streamline.net
+-- Generation Time: Jan 18, 2014 at 10:06 AM
+-- Server version: 5.0.95
+-- PHP Version: 5.1.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `amparsons1`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wp_commentmeta`
+--
+
+CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
+  `meta_id` bigint(20) unsigned NOT NULL auto_increment,
+  `comment_id` bigint(20) unsigned NOT NULL default '0',
+  `meta_key` varchar(255) default NULL,
+  `meta_value` longtext,
+  PRIMARY KEY  (`meta_id`),
+  KEY `comment_id` (`comment_id`),
+  KEY `meta_key` (`meta_key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `wp_commentmeta`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wp_comments`
+--
+
+CREATE TABLE IF NOT EXISTS `wp_comments` (
+  `comment_ID` bigint(20) unsigned NOT NULL auto_increment,
+  `comment_post_ID` bigint(20) unsigned NOT NULL default '0',
+  `comment_author` tinytext NOT NULL,
+  `comment_author_email` varchar(100) NOT NULL default '',
+  `comment_author_url` varchar(200) NOT NULL default '',
+  `comment_author_IP` varchar(100) NOT NULL default '',
+  `comment_date` datetime NOT NULL default '0000-00-00 00:00:00',
+  `comment_date_gmt` datetime NOT NULL default '0000-00-00 00:00:00',
+  `comment_content` text NOT NULL,
+  `comment_karma` int(11) NOT NULL default '0',
+  `comment_approved` varchar(20) NOT NULL default '1',
+  `comment_agent` varchar(255) NOT NULL default '',
+  `comment_type` varchar(20) NOT NULL default '',
+  `comment_parent` bigint(20) unsigned NOT NULL default '0',
+  `user_id` bigint(20) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`comment_ID`),
+  KEY `comment_post_ID` (`comment_post_ID`),
+  KEY `comment_approved_date_gmt` (`comment_approved`,`comment_date_gmt`),
+  KEY `comment_date_gmt` (`comment_date_gmt`),
+  KEY `comment_parent` (`comment_parent`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

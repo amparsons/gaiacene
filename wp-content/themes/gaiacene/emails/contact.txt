@@ -1,0 +1,11 @@
+------------------------------------------------------------
+Website contact form
+------------------------------------------------------------
+
+The following information was sent from your website
+
+Name: |FNAME|
+Surname: |LNAME|
+Email: |EMAIL|
+Company: |COMPANY|
+Message: |MESSAGE|

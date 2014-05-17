@@ -1,0 +1,38 @@
+// Colours
+$dark-grey: #444444;
+$brand-color-dark: #424251; /*  Grey */
+$brand-color-light: #08ae8d; /* Green */
+$lighttext: #6cc5ce;
+$stripcol: #35b6b0;
+$offwhite: #f6f3f0;
+$blue: #4856a6;
+$purple:#7759a5;
+
+$bacground-colour: #F2F2F2;
+$bodytext: #666666;
+$offwhite: #F2F2F2;
+$lightgrey: #CCCCCC;
+
+// base
+$base-font-family: unquote("sans-serif");
+$base-font-size: 16px;
+$base-line-height: 1.231;
+$general-margin: 15px;
+
+$selected-background-color: $brand-color-dark;
+$selected-font-color:#fff;
+
+// Media queries
+$phonelandscape: 400px;
+$ipad: 768px;
+$desktop: 1380px;
+
+h1, h2, h3, h4, p {
+	margin:0;
+	padding:0;
+}
+
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}

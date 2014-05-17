@@ -1,0 +1,133 @@
+.mobileContainer { 
+	width:100%;
+	overflow: hidden;
+	.head {
+		width:80%;
+		display:inline-block;
+		margin:em(20) 20% em(10) 0;
+		img {
+			float:right;
+		}
+	}	
+}
+#slidingMenu { 
+	display: block; 
+	position: absolute;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 100%; 
+	left: 0px; 
+	top: 0px; 
+	z-index: 0;
+	visibility: hidden;	/* to block user interaction on wp7 (z-index wont work) */
+	@media all and (min-width: $ipad) {
+		display:none;
+	}
+ }
+
+/* content property */
+.show-menu-button {
+	position:absolute; 
+	display: block; 
+	float: left; 
+	width: 24px; 
+	height: 22px; 
+	margin-top: 12px; 
+	margin-left: 11px;
+	z-index:300;
+	background: url(img/menu_bt.png) no-repeat; 
+	@media all and (min-width: $ipad) {
+		display:none;
+	}
+}
+#slidingMenu {
+	width:85%;
+	overflow-x: hidden;
+	overflow-y: hidden; 
+}
+#slidingMenu ul.mobilemenu { 
+	list-style: none; 
+	background: $brand-color-dark; 
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll; 
+}
+#slidingMenu ul.mobilemenu li { 
+	display: block; 	
+}
+.menu-icon { 
+	vertical-align: middle;
+	margin-right: 6px;
+	border:none; /* wp7 display a border on image link*/
+}
+#slidingMenu ul.mobilemenu li a { 
+	position: relative; 
+	display: block; 
+	margin-left: 5%; 
+	margin-right:20%;
+	color: #c5cbdb; 
+	text-align:right;
+	font-size:em(20);
+	font-weight:600;
+	line-height:30px;
+	text-decoration: none; 
+	border-top: 1px solid #313141;
+    box-shadow: 0 1px 0 #353547;
+}
+#slidingMenu ul li a:hover { 
+	color: #999eac; 
+	text-decoration: none; 
+}
+.social-media-white {
+	margin-left: 5%;
+	margin-right:20%;	
+	border-top: 1px solid #313141;
+	li {
+		float:right;
+		margin-left:10px;
+		padding-top:em(10);
+		a {
+			display:block;
+			border-top:none;
+		}
+	}
+}
+/* Desktop Menu */
+nav ul {
+	float:right;
+	margin-top:em(36);
+	li {
+		float:left;
+		color:#fff;
+		font-weight:600;
+		a {
+			color:#fff;
+			margin:0 10px;
+			font-size:em(14);
+			padding:0 4px em(2) 4px;
+			text-transform:uppercase;
+			@media all and (min-width: $desktop) {
+				margin:0 16px;
+			}
+			&:hover,
+			&:target {
+				border-bottom:5px solid $brand-color-light;
+			}
+		}
+		&:after {
+			content:('\002F');
+		}
+		&:last-child a {
+			padding-right:0;
+		}
+		&:last-child:after {
+			content:('');
+		}
+		&.current_page_item a {
+			border-bottom:5px solid $brand-color-light;
+		}
+	}	
+}
+
+
+

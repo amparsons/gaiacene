@@ -1,0 +1,94 @@
+input,
+textarea {
+	min-height:48px;
+	color:#999999;
+	border:none;
+	font-size:em(16);
+	padding:0 2%;
+	background:#fff;
+	border:1px solid #cecebf;
+	&.newsletter {
+		float:left;
+		width:96%;
+		@media all and (min-width: $ipad) {
+			float:none;
+			width:269px;
+			margin-right:8px;
+		}
+	}
+}
+textarea {
+	width:96.1%;
+	padding-top:em(10);
+	padding-bottom:em(10);
+	min-height:280px;
+}
+input[type=submit] {
+	display:inline-block;
+	color:#fff;
+	border-radius:5px;
+	padding:15px 50px 15px 44px;
+	font-weight:600;
+	outline:none;
+	border:none;
+	background:$brand-color-light url(img/small-right-arrow.png) no-repeat 87% center;
+}
+
+.intro form.contact {
+	width:100%;
+	padding:0;
+	text-align:center;
+	@media all and (min-width: $ipad) {
+		width:88.6685552407932%; /*  626 / 706*/
+		margin-left:5.6657223796034%; /*  40 / 706*/
+	}
+	input[type="text"],
+	input[type="email"]  {
+		float:left; 
+		width:96%;
+		margin-bottom:em(30);
+		@media all and (min-width: $ipad) {
+			width:43.12460063897764%; /*  295 / 626 */
+			&.last {
+				float:right;
+			}
+		}
+	}
+	input[type=submit] {
+		margin:em(27) auto em(58) auto;
+	}
+}
+.errormsg {
+	width:96%;
+	border:2px solid #c7313a;
+	padding:20px 2%;
+	background:rgba(199,45,58,0.3);
+	margin-bottom:em(20);
+	margin-top:em(30);
+	p {
+		color:#c7313a;
+		margin-bottom:0 !important;
+	}
+	a {
+		color:#c7313a;
+		&:hover {
+			color:#c7313a;
+			text-decoration:underline;
+		}
+	}
+}
+
+@media all and (max-width: 760px) {
+	.full-width-form {
+		input {
+			width:96%;
+			margin-bottom:em(20);
+		}
+		input[type="submit"] {
+			width:100%;
+		}
+	}
+}
+
+
+
