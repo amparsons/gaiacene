@@ -1,8 +1,0 @@
-FTP Password:
--802e0kC8'6:6{o
-
-
-Database Details:-
-Internal Hostname: internal-db.s3439.gridserver.com 
-Username: db3439_annemarie 
-Password: 5_4d8<u]0!n6K87

@@ -1,4 +1,0 @@
-MySQL Server:	MySQL 9
-MySQL Hostname:	88.208.193.103
-MySQL Username:	amparsons1
-MySQL Password:	X61HGSh2Aqhr
